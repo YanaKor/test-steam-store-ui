@@ -1,4 +1,7 @@
+import time
+
 import allure
+from selenium.common import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
@@ -21,8 +24,11 @@ class BasePage:
         self.wait.until(ec.visibility_of_element_located(locator)).send_keys(text)
 
     def element_is_present(self, locator):
-        self.wait.until(ec.presence_of_element_located(locator))
+        return self.wait.until(ec.presence_of_element_located(locator)).is_displayed()
 
     @allure.step('Get text')
-    def get_text(self, locator):
-        return self.wait.until(ec.visibility_of_element_located(locator)).text
+    def get_text(self, locator, pause_duration=2):
+        # self.driver.implicitly_wait(10) # это не работает!!!!!!!!!!!!
+        time.sleep(pause_duration)
+        element = self.wait.until(ec.visibility_of_element_located(locator))
+        return element.text

@@ -20,4 +20,3 @@ class MainPage(BasePage):
         page_title = Constants.MAIN_PAGE_TITLE.value
         assert self.driver.title == page_title,\
             f'Название страницы {self.driver.title}, а не {page_title}'
-        # assert self.find_element(MainPagesLocators.MAIN_PAGE_TITLE).text == page_title

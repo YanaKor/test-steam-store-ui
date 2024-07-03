@@ -28,19 +28,17 @@ class LoginPage(BasePage):
     @allure.step('checking that the login page opens')
     def check_login_page(self):
         page_title = Constants.LOGIN_PAGE_TITLE.value
-        assert self.driver.title == page_title,\
+        assert self.driver.title == page_title, \
             f'Название страницы {self.driver.title}, а не {page_title}'
         # assert self.find_element(MainPagesLocators.LOGIN_PAGE_TITLE).text == page_title
 
     @allure.step('Check loading element is displayed')
-    def check_element_is_displayed(self, locator):
-        # TODO: дописать локатор элемента прогрузки
-        assert self.element_is_present(locator).is_displayed()
+    def check_element_is_displayed(self):
+        assert self.element_is_present(LoginPageLocators.LOADING_ELEMENT), 'Элемент не отображается на странице'
 
     @allure.step('Check error text is displayed')
     def check_error(self):
         error_message = Constants.ERROR_MESSAGE.value
         actual_message = self.get_text(LoginPageLocators.ERROR_MESSAGE)
-        assert actual_message == error_message,\
-            f'Ожидали {error_message}, получили {actual_message}'
-
+        assert actual_message == error_message, \
+            f'Ожидали {error_message}, получили ничего'

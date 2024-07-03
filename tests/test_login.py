@@ -19,6 +19,5 @@ class TestLogin:
         login_page.fill_email_field(TestDataGenerator.generate_email())
         login_page.fill_password_field(TestDataGenerator.generate_password())
         login_page.click_on_submit_button()
-        # login_page.check_element_is_displayed()
-        time.sleep(5)
+        login_page.check_element_is_displayed()
         login_page.check_error()
