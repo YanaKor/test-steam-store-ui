@@ -1,7 +1,6 @@
 import time
 
 import allure
-from selenium.common import TimeoutException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
@@ -11,9 +10,6 @@ class BasePage:
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 5)
-
-    def find_element(self, locator):
-        self.driver.find_elements(*locator)
 
     @allure.step('Clicking on element')
     def click(self, locator):
@@ -32,3 +28,7 @@ class BasePage:
         time.sleep(pause_duration)
         element = self.wait.until(ec.visibility_of_element_located(locator))
         return element.text
+
+    def find_all_elements(self, locator):
+        self.driver.find_elements(*locator)
+
