@@ -19,9 +19,6 @@ class BasePage:
     def fill_field(self, locator, text):
         self.wait.until(ec.visibility_of_element_located(locator)).send_keys(text)
 
-    def element_is_present(self, locator):
-        return self.wait.until(ec.presence_of_element_located(locator)).is_displayed()
-
     @allure.step('Get text')
     def get_text(self, locator, pause_duration=2):
         # self.driver.implicitly_wait(10) # это не работает!!!!!!!!!!!!
@@ -30,5 +27,5 @@ class BasePage:
         return element.text
 
     def find_all_elements(self, locator):
-        self.driver.find_elements(*locator)
+        return self.wait.until(ec.presence_of_all_elements_located(locator))
 

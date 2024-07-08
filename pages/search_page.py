@@ -25,13 +25,13 @@ class SearchPage(BasePage):
 
     def get_list_of_games(self, quantity):
         print('begin')
-        # elements = []
+        elements = []
         elements = self.find_all_elements(SearchGamesLocators.LIST_OF_GAMES)
         print(elements)
         print('________')
         list_of_elements = elements[:quantity]
-        # print(list_of_elements)
+        print(list_of_elements)
         print('_______')
         for element in list_of_elements:
-            # elements.append(element)
+            elements.append(element)
             print(elements.text)
