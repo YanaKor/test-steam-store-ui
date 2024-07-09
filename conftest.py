@@ -17,13 +17,13 @@ from locators import Urls
 #     )
 
 
-@pytest.fixture()
+@pytest.fixture(params=['en-US', 'ru'])
 def driver(request):
     # language = request.config.getoption('language')
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--window-size=1920,1080')
     # chrome_options.add_experimental_option('prefs', {'intl.accept_languages': language})
-    # chrome_options.add_argument("--lang=en-US")
+    chrome_options.add_argument(f"--lang={request.param}")
     # chrome_options.add_argument("--lang=ru")
     driver = webdriver.Chrome(service=Service(), options=chrome_options)
 
