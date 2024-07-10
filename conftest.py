@@ -3,8 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from patterns.singleton import SingletonChrome
 
-
-from locators import Urls
+from config.config import Config
 
 
 # @pytest.fixture(params=['en-US', 'ru'])
@@ -26,6 +25,6 @@ def driver():
     chrome_options.add_argument("--lang=en-US")
 
     driver = SingletonChrome(service=Service(), options=chrome_options)
-    driver.get(Urls.BASE_URL)
+    driver.get(Config().load_config())
     yield driver
     driver.quit()

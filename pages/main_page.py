@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from pages.base_page import BasePage
 from data.test_data import Constants
 
-# MAIN_PAGE_TITLE = (By.XPATH, ".//title[text()='Добро пожаловать в Steam']")
 MAIN_PAGE_TITLE = (By.XPATH, ".//title[text()='Welcome to Steam']")
 
 
