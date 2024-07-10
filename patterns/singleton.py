@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 
-class SingletonChrome:
+class Browser:
     _instance = None
 
     def __new__(cls, *args, **kwargs):
@@ -9,6 +9,7 @@ class SingletonChrome:
             cls._instance = webdriver.Chrome(*args, **kwargs)
         return cls._instance
 
-    # def __init__(self, *args, **kwargs):
-    #     if not hasattr(self, 'driver'):
-    #         super().__init__(*args, **kwargs)
+    @classmethod
+    def quit(cls):
+        cls._instance.quit()
+        cls._instance = None
