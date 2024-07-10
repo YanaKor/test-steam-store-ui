@@ -19,7 +19,7 @@ class TestSearch:
         search_page = SearchPage(driver)
         search_page.search_game(game)
         search_page.sort_games_by_desc()
+        time.sleep(5)
         search_page.get_list_of_games(quantity_of_games)
 
-        time.sleep(5)
 
