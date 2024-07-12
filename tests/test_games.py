@@ -1,17 +1,18 @@
-import time
-
 import allure
 import pytest
 
 from pages.main_page import MainPage
 from pages.search_page import SearchPage
-from helpers import is_sorted_descending
+from price_helpers import is_sorted_descending
+from data.test_data import TestData
 
 
 @allure.suite('test search')
 class TestSearch:
 
-    @pytest.mark.parametrize('game, quantity_of_games', [('The Witcher', 10), ('Fallout', 20)])
+    @pytest.mark.parametrize('game, quantity_of_games', [(TestData.THE_WITCHER.name.replace('_', ' '),
+                                                          TestData.THE_WITCHER.value),
+                                                         (TestData.FALLOUT.name, TestData.FALLOUT.value)])
     def test_search_games(self, browser, game, quantity_of_games):
         main_page = MainPage(browser)
         assert main_page.is_main_page_opened(), 'The main page does not open'

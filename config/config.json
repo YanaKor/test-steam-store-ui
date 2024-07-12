@@ -1,3 +1,8 @@
 {
-    "BASE_URL": "https://store.steampowered.com"
+    "BASE_URL": "https://store.steampowered.com",
+    "chrome_options": [
+    "--window-size=1920,1080",
+    "--lang=en-US",
+    "--lang=ru"],
+    "timeout": 20
 }
