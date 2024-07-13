@@ -4,15 +4,17 @@ import pytest
 from pages.main_page import MainPage
 from pages.search_page import SearchPage
 from price_helpers import is_sorted_descending
-from data.test_data import TestData
+from config.configutils import ConfigUtils
 
 
 @allure.suite('test search')
 class TestSearch:
 
-    @pytest.mark.parametrize('game, quantity_of_games', [(TestData.THE_WITCHER.name.replace('_', ' '),
-                                                          TestData.THE_WITCHER.value),
-                                                         (TestData.FALLOUT.name, TestData.FALLOUT.value)])
+    @pytest.mark.parametrize('game, quantity_of_games', [
+        (ConfigUtils.get_test_data_value('The Witcher', 'name'),
+         ConfigUtils.get_test_data_value('The Witcher', 'quantity_of_games')),
+        (ConfigUtils.get_test_data_value('Fallout', 'name'),
+         ConfigUtils.get_test_data_value('Fallout', 'quantity_of_games'))])
     def test_search_games(self, browser, game, quantity_of_games):
         main_page = MainPage(browser)
         assert main_page.is_main_page_opened(), 'The main page does not open'
@@ -23,5 +25,3 @@ class TestSearch:
         search_page.sort_games_by_desc()
         sorted_list = search_page.get_list_of_games(quantity_of_games)
         assert is_sorted_descending(sorted_list), 'The list is not sorted in descending order'
-
-

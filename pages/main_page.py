@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
-from config.config import Config
+from config.configutils import ConfigUtils
 
 
 class MainPage(BasePage):
@@ -16,7 +16,7 @@ class MainPage(BasePage):
 
     def is_main_page_opened(self):
         try:
-            WebDriverWait(self.driver, timeout=Config.get_config_value('timeout')).until(
+            WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
                 ec.presence_of_element_located(self.UNIC_ELEMENT))
         except TimeoutError:
             return False
