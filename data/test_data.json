@@ -1,0 +1,10 @@
+{
+  "The Witcher": {
+    "name": "The Witcher",
+    "quantity_of_games": 10
+  },
+  "Fallout": {
+    "name": "Fallout",
+    "quantity_of_games": 15
+  }
+}
