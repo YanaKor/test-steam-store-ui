@@ -8,11 +8,12 @@ from config.configutils import ConfigUtils
 
 @pytest.fixture(scope="function", params=ConfigUtils.get_config_value('languages'))
 def browser(request):
+    language = request.param
     chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument(f"--lang={request.param}")
+    chrome_options.add_argument(f"--lang={language}")
     for option in ConfigUtils.get_config_value('chrome_options'):
         chrome_options.add_argument(option)
     browser = Browser(service=Service(), options=chrome_options)
     browser.get(ConfigUtils().get_config_value('BASE_URL'))
-    yield browser
+    yield browser, language
     Browser.quit()

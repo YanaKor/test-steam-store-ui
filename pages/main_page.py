@@ -8,16 +8,22 @@ from config.configutils import ConfigUtils
 
 
 class MainPage(BasePage):
-    MAIN_PAGE_TITLE = (By.XPATH, ".//title[text()='Welcome to Steam']")
+    # MAIN_PAGE_TITLE = (By.XPATH, ".//title[text()='Welcome to Steam']")
     UNIC_ELEMENT = (By.XPATH, "//a[contains(@class,'pulldown') and text()= 'Your Store']")
+    UNIC_ELEMENT_RU = (By.XPATH, "//a[contains(@class,'pulldown') and text()= 'Магазин']")
 
     def __init__(self, driver):
         super().__init__(driver)
 
-    def is_main_page_opened(self):
+    def is_main_page_opened(self, language):
         try:
-            WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
-                ec.presence_of_element_located(self.UNIC_ELEMENT))
+            if language == 'en-US':
+                WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
+                    ec.presence_of_element_located(self.UNIC_ELEMENT))
+            else:
+                WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
+                    ec.presence_of_element_located(self.UNIC_ELEMENT_RU))
+
         except TimeoutError:
             return False
         return True

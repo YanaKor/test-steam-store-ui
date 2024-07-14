@@ -1,3 +1,5 @@
+import time
+
 import allure
 import pytest
 
@@ -16,8 +18,10 @@ class TestSearch:
         (ConfigUtils.get_test_data_value('Fallout', 'name'),
          ConfigUtils.get_test_data_value('Fallout', 'quantity_of_games'))])
     def test_search_games(self, browser, game, quantity_of_games):
+        browser, language = browser
         main_page = MainPage(browser)
-        assert main_page.is_main_page_opened(), 'The main page does not open'
+
+        assert main_page.is_main_page_opened(language), 'The main page does not open'
 
         search_page = SearchPage(browser)
         search_page.search_game(game)

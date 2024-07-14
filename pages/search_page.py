@@ -42,12 +42,15 @@ class SearchPage(BasePage):
             ec.element_to_be_clickable(self.SORT_BY_DESC)).click()
 
     def get_list_of_games(self, quantity):
+        WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
+            ec.presence_of_element_located(self.LOAD_LIST_BY_DESC))
         WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until_not(
-            ec.visibility_of_element_located(self.LOAD_LIST_BY_DESC))
+            ec.presence_of_element_located(self.LOAD_LIST_BY_DESC))
         elements = WebDriverWait(self.driver, timeout=ConfigUtils.get_config_value('timeout')).until(
             ec.presence_of_all_elements_located(self.LIST_OF_GAMES))
         game_prices = []
         for element in elements[:quantity]:
             price = element.text
             game_prices.append(price)
+        print(game_prices)
         return game_prices
