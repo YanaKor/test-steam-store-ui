@@ -1,21 +1,19 @@
-from support.logger import log_func
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
+from support.logger import log
 
 
 class BasePage:
-    log = log_func()
+    UNIQUE_ELEMENT_LOCATOR = None
 
-    def __init__(self, unique_element, driver, name):
-        self.unique_element = unique_element
+    def __init__(self, driver):
         self.driver = driver
-        self.name = name
+        self.unique_element = None
+        self.page_name = None
 
-    def wait_for_opening(self, timeout=10):
+    def wait_for_opening(self):
         try:
-            self.log.info(f"{self.name} page is opening")
-            WebDriverWait(self.driver, timeout).until(ec.presence_of_element_located(self.unique_element))
-        except Exception as e:
-            self.log.error(f"Error waiting for {self.name} page to open: {e}")
-            raise e
-
+            log.info(f"{self.page_name} page is opening")
+            self.unique_element.wait_for_presence()
+        except TimeoutError as e:
+            log.error(f"Error waiting for {self.page_name} page to open: {e}")
+            return False
+        return True
