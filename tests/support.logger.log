@@ -1,0 +1,9 @@
+support.logger 2024-07-21 18:12:14,053 INFO Chrome starts
+support.logger 2024-07-21 18:12:15,377 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 18:12:17,959 INFO Opening page https://the-internet.herokuapp.com/upload
+support.logger 2024-07-21 18:12:18,353 INFO Getting original driver from selenium
+support.logger 2024-07-21 18:12:18,353 INFO File Uploader page is opening
+support.logger 2024-07-21 18:12:18,353 INFO Waiting for presence of element
+support.logger 2024-07-21 18:12:18,362 INFO Clicking on element
+support.logger 2024-07-21 18:12:18,416 INFO Sending text to input
+support.logger 2024-07-21 18:12:18,582 INFO Closing the browser

@@ -1,0 +1,134 @@
+support.logger 2024-07-21 01:33:20,042 INFO Chrome starts
+support.logger 2024-07-21 01:33:21,367 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:33:23,945 INFO Opening page https://the-internet.herokuapp.com/horizontal_slider
+support.logger 2024-07-21 01:33:24,157 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:33:24,157 INFO Horizontal Slider is opening
+support.logger 2024-07-21 01:33:24,157 INFO Horizontal Slider page is opening
+support.logger 2024-07-21 01:33:24,157 INFO Waiting for presence of element
+support.logger 2024-07-21 01:33:24,168 INFO Move slides right for 5 moves
+support.logger 2024-07-21 01:33:24,168 INFO Waiting for presence of element
+support.logger 2024-07-21 01:33:24,175 INFO Move arrow for %d moves
+support.logger 2024-07-21 01:33:24,207 INFO Move arrow for %d moves
+support.logger 2024-07-21 01:33:24,230 INFO Move arrow for %d moves
+support.logger 2024-07-21 01:33:24,250 INFO Move arrow for %d moves
+support.logger 2024-07-21 01:33:24,272 INFO Move arrow for %d moves
+support.logger 2024-07-21 01:33:24,294 INFO Getting slider value
+support.logger 2024-07-21 01:33:24,294 INFO Getting element ('xpath', "//div[@class='sliderContainer']//span[@id='range']") text
+support.logger 2024-07-21 01:33:24,317 INFO Closing the browser
+support.logger 2024-07-21 01:33:30,515 INFO Chrome starts
+support.logger 2024-07-21 01:33:31,856 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:33:35,002 INFO Opening page https://the-internet.herokuapp.com/javascript_alerts
+support.logger 2024-07-21 01:33:35,213 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:33:35,215 INFO JavaScripts Alerts is opening
+support.logger 2024-07-21 01:33:35,215 INFO JavaScripts Alerts page is opening
+support.logger 2024-07-21 01:33:35,215 INFO Waiting for presence of element
+support.logger 2024-07-21 01:33:35,227 INFO JS alert is opening
+support.logger 2024-07-21 01:33:35,227 INFO Clicking on element
+support.logger 2024-07-21 01:33:35,276 INFO Getting  alert text
+support.logger 2024-07-21 01:33:35,277 INFO Alert is opening
+support.logger 2024-07-21 01:33:35,278 INFO Switching to alert
+support.logger 2024-07-21 01:33:35,279 INFO Accept the alert
+support.logger 2024-07-21 01:33:35,285 INFO Getting result alert text
+support.logger 2024-07-21 01:33:35,285 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:35,307 INFO JS confirm is opening
+support.logger 2024-07-21 01:33:35,307 INFO Clicking on element
+support.logger 2024-07-21 01:33:35,347 INFO Getting  alert text
+support.logger 2024-07-21 01:33:35,348 INFO Alert is opening
+support.logger 2024-07-21 01:33:35,349 INFO Switching to alert
+support.logger 2024-07-21 01:33:35,349 INFO Accept the alert
+support.logger 2024-07-21 01:33:35,351 INFO Getting result alert text
+support.logger 2024-07-21 01:33:35,351 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:35,367 INFO JS prompt is opening
+support.logger 2024-07-21 01:33:35,367 INFO Clicking on element
+support.logger 2024-07-21 01:33:35,408 INFO Getting  alert text
+support.logger 2024-07-21 01:33:35,410 INFO Alert is opening
+support.logger 2024-07-21 01:33:35,411 INFO Switching to alert
+support.logger 2024-07-21 01:33:35,411 INFO Sending keys to alert
+support.logger 2024-07-21 01:33:35,412 INFO Accept the alert
+support.logger 2024-07-21 01:33:35,414 INFO Getting result alert text
+support.logger 2024-07-21 01:33:35,414 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:35,433 INFO Closing the browser
+support.logger 2024-07-21 01:33:41,649 INFO Chrome starts
+support.logger 2024-07-21 01:33:42,995 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:33:46,413 INFO Opening page https://the-internet.herokuapp.com/javascript_alerts
+support.logger 2024-07-21 01:33:46,626 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:33:46,627 INFO JavaScripts Alerts is opening
+support.logger 2024-07-21 01:33:46,627 INFO JavaScripts Alerts page is opening
+support.logger 2024-07-21 01:33:46,627 INFO Waiting for presence of element
+support.logger 2024-07-21 01:33:46,638 INFO Execute js script
+support.logger 2024-07-21 01:33:46,645 INFO Alert is opening
+support.logger 2024-07-21 01:33:46,646 INFO Switching to alert
+support.logger 2024-07-21 01:33:46,647 INFO Getting  alert text
+support.logger 2024-07-21 01:33:46,648 INFO Accept the alert
+support.logger 2024-07-21 01:33:46,650 INFO Getting result alert text
+support.logger 2024-07-21 01:33:46,650 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:46,677 INFO Execute js script
+support.logger 2024-07-21 01:33:46,682 INFO Getting  alert text
+support.logger 2024-07-21 01:33:46,683 INFO Alert is opening
+support.logger 2024-07-21 01:33:46,685 INFO Switching to alert
+support.logger 2024-07-21 01:33:46,685 INFO Accept the alert
+support.logger 2024-07-21 01:33:46,687 INFO Getting result alert text
+support.logger 2024-07-21 01:33:46,687 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:46,706 INFO Execute js script
+support.logger 2024-07-21 01:33:46,713 INFO Getting  alert text
+support.logger 2024-07-21 01:33:46,714 INFO Alert is opening
+support.logger 2024-07-21 01:33:46,715 INFO Switching to alert
+support.logger 2024-07-21 01:33:46,716 INFO Sending keys to alert
+support.logger 2024-07-21 01:33:46,717 INFO Accept the alert
+support.logger 2024-07-21 01:33:46,720 INFO Getting result alert text
+support.logger 2024-07-21 01:33:46,720 INFO Getting element ('xpath', "//p[@id='result' and contains(text(), 'You')]") text
+support.logger 2024-07-21 01:33:46,735 INFO Closing the browser
+support.logger 2024-07-21 01:33:52,900 INFO Chrome starts
+support.logger 2024-07-21 01:33:54,257 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:33:56,787 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:33:57,226 INFO Base Authorization Page is opening
+support.logger 2024-07-21 01:33:57,226 INFO Base Authorization Page page is opening
+support.logger 2024-07-21 01:33:57,227 INFO Waiting for presence of element
+support.logger 2024-07-21 01:33:57,237 INFO Checking text after authorization
+support.logger 2024-07-21 01:33:57,238 INFO Getting element ('xpath', "//div[@class='example']/p[contains(text(), 'Congratulations!')]") text
+support.logger 2024-07-21 01:33:57,263 INFO Getting element ('xpath', "//div[@class='example']/p[contains(text(), 'Congratulations!')]") text
+support.logger 2024-07-21 01:33:57,280 ERROR Expected text is Congratulations! You must have the proper credentials., but got None
+support.logger 2024-07-21 01:33:57,363 INFO Closing the browser
+support.logger 2024-07-21 01:33:59,457 INFO Chrome starts
+support.logger 2024-07-21 01:34:00,797 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:34:03,262 INFO Opening page https://the-internet.herokuapp.com/context_menu
+support.logger 2024-07-21 01:34:03,465 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:34:03,465 INFO Context Menu is opening
+support.logger 2024-07-21 01:34:03,465 INFO Context Menu page is opening
+support.logger 2024-07-21 01:34:03,466 INFO Waiting for presence of element
+support.logger 2024-07-21 01:34:03,476 INFO Right click on context menu
+support.logger 2024-07-21 01:34:03,477 INFO Waiting for presence of element
+support.logger 2024-07-21 01:34:03,483 INFO Right click on element
+support.logger 2024-07-21 01:34:03,760 INFO Alert is opening
+support.logger 2024-07-21 01:34:03,762 INFO Switching to alert
+support.logger 2024-07-21 01:34:03,762 INFO Getting  alert text
+support.logger 2024-07-21 01:34:03,763 INFO Accept the alert
+support.logger 2024-07-21 01:34:03,766 INFO Closing the browser
+support.logger 2024-07-21 01:34:09,954 INFO Chrome starts
+support.logger 2024-07-21 01:34:11,296 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:34:14,454 INFO Opening page https://the-internet.herokuapp.com/windows
+support.logger 2024-07-21 01:34:14,660 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:34:14,660 INFO Handlers page is opening
+support.logger 2024-07-21 01:34:14,660 INFO Waiting for presence of element
+support.logger 2024-07-21 01:34:14,674 INFO Clicking on element
+support.logger 2024-07-21 01:34:14,745 INFO Switch to new window
+support.logger 2024-07-21 01:34:14,756 INFO Getting element ('xpath', "//div[@class='example']/h3") text
+support.logger 2024-07-21 01:34:14,976 INFO Get window title
+support.logger 2024-07-21 01:34:17,980 INFO Switch to new window
+support.logger 2024-07-21 01:34:20,994 INFO Handlers page is opening
+support.logger 2024-07-21 01:34:20,994 INFO Waiting for presence of element
+support.logger 2024-07-21 01:34:21,000 ERROR Handler page does not open
+support.logger 2024-07-21 01:34:25,099 INFO Closing the browser
+support.logger 2024-07-21 01:34:27,232 INFO Chrome starts
+support.logger 2024-07-21 01:34:28,584 INFO Opening page https://the-internet.herokuapp.com
+support.logger 2024-07-21 01:34:31,206 INFO Opening page https://the-internet.herokuapp.com//hovers
+support.logger 2024-07-21 01:34:31,597 INFO Getting original driver from selenium
+support.logger 2024-07-21 01:34:31,597 INFO Hovers is opening
+support.logger 2024-07-21 01:34:31,598 INFO Hovers page is opening
+support.logger 2024-07-21 01:34:31,598 INFO Waiting for presence of element
+support.logger 2024-07-21 01:34:31,605 INFO Waiting for presence list of elements
+support.logger 2024-07-21 01:34:31,613 INFO 
+support.logger 2024-07-21 01:34:33,890 INFO Getting element ('xpath', "//div[@class='figcaption']//h5") text
+support.logger 2024-07-21 01:34:33,914 INFO 
+support.logger 2024-07-21 01:34:36,185 INFO Getting element ('xpath', "//div[@class='figcaption']//h5") text
+support.logger 2024-07-21 01:34:50,505 INFO Closing the browser
